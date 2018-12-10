@@ -296,11 +296,14 @@ ApplicationWindow {
         var nclink
         if(Qt.platform.os==='linux'){
             unik.createLink(appExec+' -folder='+appsDir+'/ideas -cfg', unik.getPath(6)+'/ideas.desktop', 'ideas', 'It is created by Unik Qml Engine with the UnikTools')
-            unik.createLink(appExec+' -folder='+appsDir+'/ideas -git=https://github.com/nextsigner/ideas.git  -cfg', unik.getPath(6)+'/ideas_update.desktop', 'ideas_update', 'It is created by Unik Qml Engine with the UnikTools')
+            unik.createLink(appExec+' -folder='+appsDir+'/ideas 
+-git=https://github.com/miideaeslamejor/ideas.git  -cfg', 
+unik.getPath(6)+'/ideas_update.desktop', 'ideas_update', 'It is created by Unik Qml Engine with the UnikTools')
         }
         if(Qt.platform.os==='windows'){
             var flc='-folder='+appsDir+'/ideas -cfg'
-            var flc2='-folder='+appsDir+'/ideas -git=https://github.com/nextsigner/ideas.git -cfg'
+            var flc2='-folder='+appsDir+'/ideas 
+-git=https://github.com/miideaeslamejor/ideas.git -cfg'
             unik.createLink(appExec, flc, unik.getPath(6)+'/ideas.lnk',"It is a file created by Unik Qml Engine", appsDir+'/ideas' )
             unik.createLink(appExec, flc2, unik.getPath(6)+'/ideas_update.lnk',"It is a file created by Unik Qml Engine", appsDir+'/ideas' )
         }
